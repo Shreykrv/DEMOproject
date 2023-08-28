@@ -2,14 +2,12 @@
     "builds": [{
         "src": "dams/wsgi.py",
         "use": "@vercel/python",
-        "config": {"maxLambdaSize": "15mb", "runtime": "python3.11"}
+        "config": {"maxLambdaSize": "15mb"}
     }],
-    "routes": [
-        {
+    "routes": [{
             "src": "/(.*)",
             "dest": "dams/wsgi.py"
-        }
-    ]
+        }]
 }
 
 
